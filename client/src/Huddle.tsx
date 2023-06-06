@@ -1,14 +1,13 @@
-import { useHuddle01 } from '@huddle01/react';
-import { useEffect } from 'react';
+import { HuddleIframe } from "@huddle01/iframe";
+import { iframeApi } from '@huddle01/iframe';
 
-function Huddle(){
-  const { initialize, isInitialized } = useHuddle01();
+function Huddle() {
 
-  useEffect(() => {
-    // its preferable to use env vars to store projectId
-    initialize('KL1r3E1yHfcrRbXsT4mcE-3mK60Yc3YR');
-  }, []);
+    return (
 
-  return <div>{isInitialized ? 'Hello World!' : 'Please initialize'}</div>;
-};
+        <div>
+            <HuddleIframe roomUrl="https://iframe.huddle01.com/" style={{width:'1500px',height:'1000px' }} />
+        </div>
+    );
+}
 export default Huddle
