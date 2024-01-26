@@ -2,7 +2,9 @@
 import './css/main.css'
 import Landing from './components/landing/Landing'
 import { Link } from 'react-router-dom'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 // import PolybaseTesting from './PolybaseTesting'
+
 
 // import { PolybaseProvider, AuthProvider } from "@polybase/react";
 // import { Polybase } from "@polybase/client";
@@ -37,12 +39,14 @@ function App() {
           </li>
         </ul>
         <div className='flex items-center'>
-          <button
+<!--           <button
             type='button'
             className='bg-gradient-to-r from-sky-500 to-indigo-500 w-[10vw] h-[5.5vh]  text-white font-medium text-s leading-tight  rounded-full  hover:text-yellow-300 transition-all duration-200 border-t-2 '
           >
             Connect wallet
-          </button>
+          </button> -->
+          <ConnectButton />
+          
         </div>
       </div>
     </nav>
